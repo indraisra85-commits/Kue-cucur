@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Isra ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    font-family:'Segoe UI',sans-serif;
+    overflow:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:600px;
+    background:rgba(255,255,255,0.95);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:muncul 2s ease;
+    z-index:1;
+}
+
+h1{
+    color:#ff4f81;
+    margin-bottom:20px;
+}
+
+h2{
+    color:#ff4f81;
+    margin:20px 0;
+}
+
+p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.heart{
+    position:absolute;
+    bottom:-20px;
+    animation:terbang 6s linear forwards;
+}
+
+@keyframes terbang{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Untuk Isra ❤️</h1>
+
+<p>
+Hai Isra,
+</p>
+
+<p>
+Sudah lama ada sesuatu yang ingin kusampaikan.
+Setiap kali melihatmu, ada perasaan yang sulit dijelaskan dengan kata-kata.
+</p>
+
+<p>
+Hari ini aku memberanikan diri untuk mengatakannya...
+</p>
+
+<h2>💖 Aku Menyukaimu, Isra 💖</h2>
+
+<p>
+Terima kasih karena tanpa sadar telah membuat hari-hariku terasa lebih berwarna.
+Apa pun jawabanmu nanti, aku hanya ingin kamu tahu bahwa perasaan ini tulus.
+</p>
+
+<p>
+✨ Dari seseorang yang mengagumimu ✨
+</p>
+
+<p style="font-weight:bold; color:#ff4f81; font-size:20px;">
+— Indra Gunawan ❤️
+</p>
+</div>
+
+<script>
+function buatHati(){
+    const hati = document.createElement("div");
+
+    hati.classList.add("heart");
+    hati.innerHTML = "❤️";
+
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.fontSize = (20 + Math.random() * 25) + "px";
+
+    document.body.appendChild(hati);
+
+    setTimeout(() => {
+        hati.remove();
+    }, 6000);
+}
+
+setInterval(buatHati, 300);
+</script>
+
+</body>
+</html>
